@@ -1,0 +1,67 @@
+// Пример линейной структуры данных меню, пришедших с сервера из которого сформируется дерево
+{
+  "data":[
+    // ветка браузеров
+    {
+      "uuid": "1",
+      "parent_uuid": "root",
+      "text":"browsers",
+      "glyph":"xf108"
+    },
+    {
+      "uuid": "11",
+      "parent_uuid": "1",
+      "text":"edge",
+      "glyph":"xf282",
+      "leaf": true,
+      "module_xtype":"base-module"
+    },
+    {
+      "uuid": "12",
+      "parent_uuid": "1",
+      "text":"opera",
+      "glyph":"xf26a",
+      "leaf": true,
+      "module_xtype":"base-module"
+    },
+    {
+      "uuid": "13",
+      "parent_uuid": "1",
+      "text":"chrome",
+      "glyph":"xf268",
+      "leaf": true,
+      "module_xtype":"base-module"
+    },
+    {
+      "uuid": "14",
+      "parent_uuid": "1",
+      "text":"firefox",
+      "glyph":"xf269",
+      "leaf": true,
+      "module_xtype":"base-module"
+    },
+    // ветка web программинга
+    {
+      "uuid": "2",
+      "parent_uuid": "root",
+      "text":"programming",
+      "glyph":"xf1c9"
+    },
+    {
+      "uuid": "21",
+      "parent_uuid": "2",
+      "text":"html5",
+      "glyph":"xf13b",
+      "leaf": true,
+      "module_xtype":"base-module"
+    },
+    {
+      "uuid": "22",
+      "parent_uuid": "2",
+      "text":"css3",
+      "glyph":"xf13c",
+      "leaf": true,
+      "module_xtype":"security-module"
+    }
+  ]
+}

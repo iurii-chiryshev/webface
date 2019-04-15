@@ -1,0 +1,25 @@
+{
+    "data":[
+        {
+          "uuid": "1",
+          "name": "ivanIvanov",
+          "email": "ivanIvanov@mail.ru",
+          "first_name": "Иван",
+          "last_name": "Иванов"
+        },
+        {
+          "uuid": "2",
+          "name": "petrPetrov",
+          "email": "petrPetrov@ya.ru",
+          "first_name": "Петр",
+          "last_name": "Петров"
+        },
+        {
+          "uuid": "3",
+          "name": "sergeyMarkin",
+          "email": "sergeyMarkin@gmail.ru",
+          "first_name": "Сергей",
+          "last_name": "Маркин"
+        }
+    ]
+}

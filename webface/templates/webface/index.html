@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- Заголовок -->
+        <title>Webface</title>
+
+        <link href="{% static 'webface/favicon.ico' %}" rel="icon" type="image/x-icon"/>
+
+        <script type="text/javascript">
+            var Ext = Ext || {};
+            // javascript object с настройками, которые нужны внутри extjs app
+            // @see Webface.Util.getSettings()
+            Ext.django_settings = JSON.parse("{{DJANGO_SETTINGS|escapejs}}");
+
+        </script>
+
+        {% if EXTJS_BUILD == "DEBUG" %}
+            <!-- Стили-->
+            <link href="{% static 'webface/resources/font-awesome-4.7.0/css/font-awesome.css' %}" rel="stylesheet">
+            <link href="{% static 'webface/resources/css/webface.css' %}" rel="stylesheet">
+            <link href="{% static 'ext-6.2.0/build/classic/theme-triton/resources/theme-triton-all.css' %}" rel="stylesheet">
+            <!-- Ext-->
+            <script type="text/javascript" src="{% static 'ext-6.2.0/build/ext-all-debug.js' %}"></script>
+            <!-- webface app-->
+            <script type="text/javascript" src="{% static 'webface/app.js' %}"></script>
+
+        {% elif EXTJS_BUILD == "TESTING" %}
+            <link href="{% static 'webface/build/testing/WebFace/resources/font-awesome-4.7.0/css/font-awesome.css' %}" rel="stylesheet">
+            <link href="{% static 'webface/build/testing/WebFace/resources/css/webface.css' %}" rel="stylesheet">
+            <link rel="stylesheet" href="{% static 'webface/build/testing/WebFace/resources/WebFace-all.css' %}"/>
+
+            <script type="text/javascript" src="{% static 'webface/build/testing/WebFace/app.js' %}"></script>
+
+        {% elif EXTJS_BUILD == "PRODUCTION" %}
+            <link href="{% static 'webface/build/production/WebFace/resources/font-awesome-4.7.0/css/font-awesome.css' %}" rel="stylesheet">
+            <link href="{% static 'webface/build/production/WebFace/resources/css/webface.css' %}" rel="stylesheet">
+            <link rel="stylesheet" href="{% static 'webface/build/production/WebFace/resources/WebFace-all.css' %}"/>
+
+            <script type="text/javascript" src="{% static 'webface/build/production/WebFace/app.js' %}"></script>
+
+        {% endif %}
+
+        <script type="text/javascript">
+            Ext.onReady(function(){
+                var prefix = "{% static 'ext-6.2.0/build/classic/locale/locale-' %}";
+                var suffix = Webface.Locales.getUserLang() + ".js";
+                Ext.Loader.loadScript({url: prefix + suffix});
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+    </body>
+</html>

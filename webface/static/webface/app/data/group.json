@@ -1,0 +1,16 @@
+{
+    "data":[
+        {
+          "uuid": "1",
+          "name": "Admin"
+        },
+        {
+          "uuid": "2",
+          "name": "Student"
+        },
+        {
+          "uuid": "3",
+          "name": "Lecturer"
+        }
+    ]
+}

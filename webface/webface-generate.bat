@@ -1,0 +1,1 @@
+sencha.exe -sdk ./static/ext-6.2.0 generate app -classic WebFace ./static/webface
